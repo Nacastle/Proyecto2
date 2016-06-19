@@ -5,13 +5,13 @@
 #include "dragon.h"
 #include "gigante.h"
 #include "mago.h"
+#include "soldado.h"
 #include <vector>
 using std::vector;
 using std::cout;
 
 int main(int argc, char const *argv[]) {
 	vector<Guerrero*> Tropa;
-	//Guerrero[5] Tropa;
 
 	return 0;
 }

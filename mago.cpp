@@ -17,7 +17,7 @@ Mago::Mago(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVolador
 }
 
 void Mago::atacar(Guerrero* guerreroDefendiendo){
-    int moneda = 0;//Si es 2 atacara 2 veces sino solo una vez;
+    int moneda;//Si es 2 atacara 2 veces sino solo una vez;
     srand(time(NULL));
     moneda = 1+rand()%(4-1);
     if (moneda == 2){
