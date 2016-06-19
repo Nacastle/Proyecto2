@@ -1,5 +1,5 @@
-juego: main.o guerrero.o arquero.o jugador.o dragon.o gigante.o
-	g++ main.o guerrero.o jugador.o arquero.o dragon.o gigante.o -o game
+juego: main.o guerrero.o arquero.o jugador.o dragon.o gigante.o mago.o
+	g++ main.o guerrero.o jugador.o arquero.o dragon.o gigante.o mago.o -o game
 main.o:	main.cpp jugador.h guerrero.h arquero.h dragon.h
 	g++ -c main.cpp
 guerrero.o:	guerrero.cpp guerrero.h
@@ -10,5 +10,7 @@ dragon.o:	dragon.cpp dragon.h guerrero.h
 	g++ -c dragon.cpp
 gigante.o:	gigante.cpp gigante.h guerrero.h
 	g++ -c gigante.cpp
+mago.o:	mago.cpp mago.h guerrero.h
+	g++ -c mago.cpp
 jugador.o:	jugador.cpp jugador.h
 	g++ -c jugador.cpp

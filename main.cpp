@@ -4,6 +4,7 @@
 #include "arquero.h"
 #include "dragon.h"
 #include "gigante.h"
+#include "mago.h"
 #include <vector>
 using std::vector;
 using std::cout;

@@ -27,6 +27,6 @@ void Gigante::atacar(Guerrero* guerreroDefendiendo){
 
 string Gigante::toString(){
     stringstream ss;
-    ss << "Dragon: " << Guerrero::toString();
+    ss << "Gigante: " << Guerrero::toString();
     return ss.str();
 }
