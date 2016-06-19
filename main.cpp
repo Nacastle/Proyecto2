@@ -2,6 +2,7 @@
 #include "jugador.h"
 #include "guerrero.h"
 #include "arquero.h"
+#include "dragon.h"
 #include <vector>
 using std::vector;
 using std::cout;
