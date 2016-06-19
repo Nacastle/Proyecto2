@@ -7,15 +7,15 @@ using std::vector;
 using std::string;
 using std::stringstream;
 
-Guerrero::Guerrero(string nombre,int ataque,int defensa,int vida/*,bool puedeAtacarVoladores,bool puedeVolar*/){
+Guerrero::Guerrero(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVoladores,bool puedeVolar){
 	this->nombre = nombre;
 	this->ataque = ataque;
 	this->defensa = defensa;
 	this->vida = vida;
-	/*
+	
 	this->puedeAtacarVoladores = puedeAtacarVoladores;
 	this->puedeVolar = puedeVolar;
-	*/
+	
 }
 
 //Gets
@@ -31,14 +31,14 @@ int Guerrero::getDefensa(){
 int Guerrero::getVida(){
 	return vida;
 }
-/*
+
 bool Guerrero::isPuedeAtacarVoladores(){
 	return puedeAtacarVoladores;
 }
 bool Guerrero::isPuedeVolar(){
 	return puedeVolar;
 }
-*/
+
 //Sets
 void Guerrero::setNombre(string){
 	this->nombre = nombre;
@@ -51,14 +51,14 @@ void Guerrero::setDefensa(int){
 }
 void Guerrero::setVida(int){
 	this->vida = vida;
-}/*
+}
 void Guerrero::setPuedeAtacarVoladores(bool puedeAtacarVoladores){
 	this->puedeAtacarVoladores = puedeAtacarVoladores;
 }
 void Guerrero::setPuedeVolar(bool puedeVolar){
 	this->puedeVolar = puedeVolar;
 }
-*/
+
 void Guerrero::muerte(){
 	ataque = 0;
 	defensa = 0;

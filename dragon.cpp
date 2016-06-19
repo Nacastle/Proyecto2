@@ -8,7 +8,7 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-Dragon::Dragon(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVoladores,bool puedeVolar):Guerrero(nombre,ataque,defensa,vida){
+Dragon::Dragon(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVoladores,bool puedeVolar):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
     this->puedeAtacarVoladores = true;
     this->puedeVolar = true;
 }
