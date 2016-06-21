@@ -65,6 +65,10 @@ void Guerrero::muerte(){
 	vida = 0;
 }
 
+void Guerrero::atacar(Guerrero*){
+
+}
+
 string Guerrero::toString(){
 	stringstream ss;
 	ss << "Guerrero: " << nombre << "Ataque: " << ataque << "Defensa: " << defensa << "Vida: " << vida;

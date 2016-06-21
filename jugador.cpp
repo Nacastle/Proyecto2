@@ -7,8 +7,23 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-Jugador::Jugador(string nombre){
+Jugador::Jugador(string nombre, vector<Guerrero*> tropa){
 	this->nombre = nombre;
+	this->tropa = tropa;
+}
+
+string Jugador::getNombre(){
+	return nombre;
+}
+void Jugador::setNombre(string){
+	this->nombre = nombre;
+}
+
+vector<Guerrero*> Jugador::getTropa(){
+	return tropa;
+}
+void Jugador::setTropa(vector<Guerrero*> tropa){
+	this->tropa = tropa;
 }
 
 string Jugador::toString()const{

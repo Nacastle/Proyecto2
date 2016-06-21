@@ -8,7 +8,7 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-Arquero::Arquero(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVoladores,bool puedeVolar,int noFlechas):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
+Arquero::Arquero(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
     //noFlechas=50;
     this->noFlechas = 50;
     this->puedeAtacarVoladores = true;

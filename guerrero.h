@@ -38,6 +38,6 @@ public:
 	void setPuedeAtacarVoladores(bool);
 	void setPuedeVolar(bool);
 	
-	virtual void atacar(vector<Guerrero&>) = 0;
+	virtual void atacar(Guerrero*) = 0;
 	void muerte();
 };

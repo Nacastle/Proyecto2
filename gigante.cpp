@@ -8,7 +8,7 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-Gigante::Gigante(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVoladores,bool puedeVolar):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
+Gigante::Gigante(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
     this->puedeAtacarVoladores = false;
     this->puedeVolar = false;
 }

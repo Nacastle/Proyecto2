@@ -11,7 +11,7 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-Soldado::Soldado(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVoladores,bool puedeVolar):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
+Soldado::Soldado(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
     this->puedeAtacarVoladores = false;
     this->puedeVolar = false;
 }

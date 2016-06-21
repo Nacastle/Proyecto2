@@ -1,5 +1,5 @@
 juego: main.o guerrero.o arquero.o jugador.o dragon.o gigante.o mago.o soldado.o
-	g++ main.o guerrero.o jugador.o arquero.o dragon.o gigante.o mago.o soldado.o -o game
+	g++ main.o guerrero.o jugador.o arquero.o dragon.o gigante.o mago.o soldado.o -o game -lncurses
 main.o:	main.cpp jugador.h guerrero.h arquero.h dragon.h gigante.o mago.o soldado.o
 	g++ -c main.cpp
 guerrero.o:	guerrero.cpp guerrero.h

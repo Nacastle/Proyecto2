@@ -9,7 +9,7 @@ class Arquero:public Guerrero{
 	bool puedeVolar;//Si es false significa que es terrestre.
 	int noFlechas;
 public:
-	Arquero(string,int,int,int,bool,bool,int);
+	Arquero(string,int,int,int);
 	virtual string toString();
 	virtual void atacar(Guerrero*);
 };

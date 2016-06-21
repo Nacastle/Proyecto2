@@ -11,7 +11,7 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-Mago::Mago(string nombre,int ataque,int defensa,int vida,bool puedeAtacarVoladores,bool puedeVolar):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
+Mago::Mago(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,ataque,defensa,vida,puedeAtacarVoladores,puedeVolar){
     this->puedeAtacarVoladores = true;
     this->puedeVolar = false;
 }
