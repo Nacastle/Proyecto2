@@ -33,7 +33,7 @@ int main(int argc, char const *argv[]) {
 	while(opcion != 3){
 		char str2[80];
 		mvprintw(0,0,"Bienvenido al Juego de batalla (Se requieren 2 jugadores)");
-		mvprintw(1,0,"Ingrese una opcion\n1. Nuevo Juego\n2. Cargar Juego\n3. Salir");
+		mvprintw(1,0,"Ingrese una opcion\n1. Juego\n3. Salir");
 		opcion = getch()-'0';
 		erase();
 		char str1[80];
@@ -41,7 +41,7 @@ int main(int argc, char const *argv[]) {
 		if (opcion == 1)
 		{
 			int opcion2;
-			mvprintw(1,0,"Ingrese una opcion\n1. Nuevo Juego\n2. Cargar Juego\n3. Salir");
+			mvprintw(1,0,"Ingrese una opcion\n1. Nuevo Juego\n2. Jugar\n3. Salir");
 			opcion2 = getch()-'0';
 			erase();
 			if (opcion2 == 1)
@@ -52,7 +52,7 @@ int main(int argc, char const *argv[]) {
 					mvprintw(0,0,"Ingrese el nombre del Jugador %d: ",(i+1));
 					getstr(str1);
 				//erase();
-					for (int i = 0; i < 5; ++i)
+					for (int j = 0; j < 5; ++j)
 					{
 						mvprintw(1,0,"Ingrese el tipo de guerrero que desea crear: ");
 						mvprintw(2,0,"1 para Soldado");
@@ -179,7 +179,7 @@ int main(int argc, char const *argv[]) {
 								defensa = atoi(datos.c_str());
 							}
 							datos.clear();
-							Tropa.push_back(new Soldado(nombre,ataque,defensa,vida));
+							Tropa.push_back(new Arquero(nombre,ataque,defensa,vida));
 							mvprintw(5,0,"Felicidades ha creado un Arquero.");
 							getch();
 							erase();
@@ -240,7 +240,7 @@ int main(int argc, char const *argv[]) {
 								defensa = atoi(datos.c_str());
 							}
 							datos.clear();
-							Tropa.push_back(new Arquero(nombre,ataque,defensa,vida));
+							Tropa.push_back(new Mago(nombre,ataque,defensa,vida));
 							mvprintw(5,0,"Felicidades ha creado un Mago.");
 							getch();
 							erase();
@@ -361,7 +361,7 @@ int main(int argc, char const *argv[]) {
 								defensa = atoi(datos.c_str());
 							}
 							datos.clear();
-							Tropa.push_back(new Gigante(nombre,ataque,defensa,vida));
+							Tropa.push_back(new Dragon(nombre,ataque,defensa,vida));
 							mvprintw(5,0,"Felicidades ha creado un Dragon.");
 							getch();
 							erase();
@@ -372,8 +372,29 @@ int main(int argc, char const *argv[]) {
 			}
 			else if (opcion2 == 2)
 			{
+				/*
+				vector<Guerrero*> Tropa;
+				vector<Guerrero*> Tropa2;
+				Tropa.push_back(new Soldado("paco",100,20,20));
+				Tropa.push_back(new Arquero("paco",100,20,20));
+				Tropa.push_back(new Mago("paco",100,20,20));
+				Tropa.push_back(new Gigante("paco",100,20,20));
+				Tropa.push_back(new Dragon("paco",100,20,20));
+
+				Tropa2.push_back(new Soldado("paco",100,20,20));
+				Tropa2.push_back(new Arquero("paco",100,20,20));
+				Tropa2.push_back(new Mago("paco",100,20,20));
+				Tropa2.push_back(new Gigante("paco",100,20,20));
+				Tropa2.push_back(new Dragon("paco",100,20,20));
+
+
+				players.push_back(new Jugador("Cristobal",Tropa));
+				players.push_back(new Jugador("Inti",Tropa2));
+				
+				*/
 				while((gane[0]==false)&&(gane[1]==false)){
 					turnoJugador(players,0,gane);
+
 					if((gane[0]==false)&&(gane[1]==false)){
 						turnoJugador(players,1,gane);
 					}
@@ -409,12 +430,16 @@ void comprobarGane(vector<Jugador*> players,bool* gane){
 		}
 	}
 	if(contador[0]==5){
+		erase();
 		mvprintw(0,0,"Gano el Jugador: %s",players[1]->getNombre().c_str());
 		gane[1]=true;
+		getch();
 	}
 	if(contador[1]==5){
+		erase();
 		mvprintw(0,0,"Gano el Jugador: %s",players[0]->getNombre().c_str());
 		gane[0]=true;
+		getch();
 	}
 
 } 
@@ -435,26 +460,32 @@ void turnoJugador(vector<Jugador*> players,int i,bool* gane){
 	int n;
 	int m;
 	if(i==0){
-		mvprintw(0,0,"Con que guerrero atacaras (numero del guerrero 0-4)");
+		erase();
+		mvprintw(0,30,"Con que guerrero atacaras (numero del guerrero 0-4)");
 		imprimirGuerreros(players[i]);
 		n=getch()-48;
+		erase();
 		mvprintw(10,0,"Ingrese a que guerrero quieres destruir(0-4) :");
 		imprimirGuerreros(players[1]);
 		m=getch()-48;
 		players[i]->getTropa()[n]->atacar(players[1]->getTropa()[m]);
-		if(players[1]->getTropa()[m]->getVida()<0){
+		if(players[1]->getTropa()[m]->getVida()<=0){
+			//delete players[1]->getTropa()[m];	
+			//players[1]->getTropa().erase(players[1]->getTropa().begin()+m);
 			players[1]->getTropa()[m]->muerte();
 		}
 		comprobarGane(players,gane);
 	}else{
-		mvprintw(0,0,"Con que guerrero atacaras (numero del guerrero 0-4)");
+		erase();
+		mvprintw(0,30,"Con que guerrero atacaras (numero del guerrero 0-4)");
 		imprimirGuerreros(players[i]);
 		n=getch()-48;
+		erase();
 		mvprintw(10,0,"Ingrese a que guerrero quieres destruir :");
 		imprimirGuerreros(players[0]);
 		m=getch()-48;
 		players[i]->getTropa()[n]->atacar(players[0]->getTropa()[m]);
-		if(players[0]->getTropa()[m]->getVida()<0){
+		if(players[0]->getTropa()[m]->getVida()<=0){
 			players[0]->getTropa()[m]->muerte();
 		}
 		comprobarGane(players,gane);

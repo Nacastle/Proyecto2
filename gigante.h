@@ -9,6 +9,7 @@ class Gigante:public Guerrero{
     bool puedeVolar;//Si es false significa que es terrestre.
 public:
     Gigante(string,int,int,int);
+    ~Gigante();
     virtual string toString();
     virtual void atacar(Guerrero*);
 };

@@ -17,8 +17,8 @@ protected:
 	
 public:
 	Guerrero(string,int,int,int,bool,bool);
+	virtual ~Guerrero();
 	virtual string toString();
-	~Guerrero();
 	//Uso de Gets y Sets por la unica razon que no me deja acceder a ellos aunque los ponga protected, siendo esto asi no usare public ya que es una mala practica de programacion.
 	//Gets
 	string getNombre();

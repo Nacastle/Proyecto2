@@ -18,6 +18,10 @@ Guerrero::Guerrero(string nombre,int ataque,int defensa,int vida,bool puedeAtaca
 	
 }
 
+Guerrero::~Guerrero(){
+	
+}
+
 //Gets
 string Guerrero::getNombre(){
 	return nombre;
@@ -40,16 +44,16 @@ bool Guerrero::isPuedeVolar(){
 }
 
 //Sets
-void Guerrero::setNombre(string){
+void Guerrero::setNombre(string nombre){
 	this->nombre = nombre;
 }
-void Guerrero::setAtaque(int){
+void Guerrero::setAtaque(int ataque){
 	this->ataque = ataque;
 }
-void Guerrero::setDefensa(int){
+void Guerrero::setDefensa(int defensa){
 	this->defensa = defensa;
 }
-void Guerrero::setVida(int){
+void Guerrero::setVida(int vida){
 	this->vida = vida;
 }
 void Guerrero::setPuedeAtacarVoladores(bool puedeAtacarVoladores){
@@ -63,10 +67,6 @@ void Guerrero::muerte(){
 	ataque = 0;
 	defensa = 0;
 	vida = 0;
-}
-
-void Guerrero::atacar(Guerrero*){
-
 }
 
 string Guerrero::toString(){

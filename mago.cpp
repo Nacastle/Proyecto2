@@ -16,6 +16,9 @@ Mago::Mago(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,ataque
     this->puedeVolar = false;
 }
 
+Mago::~Mago(){
+
+}
 void Mago::atacar(Guerrero* guerreroDefendiendo){
     int moneda;//Si es 2 atacara 2 veces sino solo una vez;
     srand(time(NULL));

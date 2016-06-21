@@ -10,6 +10,7 @@ class Jugador{
 	vector<Guerrero*> tropa;
 public:
 	Jugador(string, vector<Guerrero*>);
+	~Jugador();
 	string getNombre();
 	void setNombre(string);
 	vector<Guerrero*> getTropa();

@@ -9,6 +9,7 @@ class Mago:public Guerrero{
 	bool puedeVolar;//Si es false significa que es terrestre.
 public:
 	Mago(string,int,int,int);
+	~Mago();
 	virtual string toString();
 	virtual void atacar(Guerrero*);
 };

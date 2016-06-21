@@ -13,6 +13,10 @@ Gigante::Gigante(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,
     this->puedeVolar = false;
 }
 
+Gigante::~Gigante(){
+    
+}
+
 void Gigante::atacar(Guerrero* guerreroDefendiendo){
  if (!guerreroDefendiendo->isPuedeVolar())
  {

@@ -12,6 +12,10 @@ Jugador::Jugador(string nombre, vector<Guerrero*> tropa){
 	this->tropa = tropa;
 }
 
+Jugador::~Jugador(){
+	
+}
+
 string Jugador::getNombre(){
 	return nombre;
 }

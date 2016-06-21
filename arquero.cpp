@@ -15,6 +15,9 @@ Arquero::Arquero(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,
     this->puedeVolar = false;
 }
 
+Arquero::~Arquero(){
+
+}
 void Arquero::atacar(Guerrero* guerreroDefendiendo){
         int danho=0;
         danho = noFlechas*(ataque/guerreroDefendiendo->getDefensa());

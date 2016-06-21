@@ -13,8 +13,12 @@ Dragon::Dragon(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,at
     this->puedeVolar = true;
 }
 
+Dragon::~Dragon(){
+
+}
+
 void Dragon::atacar(Guerrero* guerreroDefendiendo){
-    if (ataque>guerreroDefendiendo->getDefensa())
+    if (ataque > guerreroDefendiendo->getDefensa())
     {
         guerreroDefendiendo->setVida(guerreroDefendiendo->getVida() - 2*(ataque-(guerreroDefendiendo->getDefensa())));
     }else{

@@ -16,6 +16,9 @@ Soldado::Soldado(string nombre,int ataque,int defensa,int vida):Guerrero(nombre,
     this->puedeVolar = false;
 }
 
+Soldado::~Soldado(){
+    
+}
 void Soldado::atacar(Guerrero* guerreroDefendiendo){
     int moneda;//Si es !1 no puede atacar voladores, si es 1 si puede atacar voladores;
     srand(time(NULL));

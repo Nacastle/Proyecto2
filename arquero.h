@@ -10,6 +10,7 @@ class Arquero:public Guerrero{
 	int noFlechas;
 public:
 	Arquero(string,int,int,int);
+	~Arquero();
 	virtual string toString();
 	virtual void atacar(Guerrero*);
 };
