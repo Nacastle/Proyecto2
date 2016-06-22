@@ -36,7 +36,7 @@ int main(int argc, char const *argv[]) {
 	while(opcion != 3){
 		char str2[80];
 		mvprintw(0,0,"Bienvenido al Juego de batalla (Se requieren 2 jugadores)");
-		mvprintw(1,0,"Ingrese una opcion\n1. Juego\n2.Instrucciones\n3. Salir");
+		mvprintw(1,0,"Ingrese una opcion\n1. Juego\n2. Instrucciones\n3. Salir");
 		opcion = getch()-'0';
 		erase();
 		char str1[80];
@@ -220,10 +220,10 @@ int main(int argc, char const *argv[]) {
 								{
 									valores=control;
 									datos.push_back(valores);
-									mvprintw(2,43,"%s",datos.c_str());
+									mvprintw(2,40,"%s",datos.c_str());
 								}
 								else{
-									mvprintw(2,43,"%s",datos.c_str());
+									mvprintw(2,40,"%s",datos.c_str());
 								}
 								ataque = atoi(datos.c_str());
 							}
@@ -235,10 +235,10 @@ int main(int argc, char const *argv[]) {
 								{
 									valores=control;
 									datos.push_back(valores);
-									mvprintw(3,44,"%s",datos.c_str());
+									mvprintw(3,41,"%s",datos.c_str());
 								}
 								else{
-									mvprintw(3,44,"%s",datos.c_str());
+									mvprintw(3,41,"%s",datos.c_str());
 								}
 								defensa = atoi(datos.c_str());
 							}
@@ -341,10 +341,10 @@ int main(int argc, char const *argv[]) {
 								{
 									valores=control;
 									datos.push_back(valores);
-									mvprintw(2,43,"%s",datos.c_str());
+									mvprintw(2,42,"%s",datos.c_str());
 								}
 								else{
-									mvprintw(2,43,"%s",datos.c_str());
+									mvprintw(2,42,"%s",datos.c_str());
 								}
 								ataque = atoi(datos.c_str());
 							}
@@ -356,10 +356,10 @@ int main(int argc, char const *argv[]) {
 								{
 									valores=control;
 									datos.push_back(valores);
-									mvprintw(3,44,"%s",datos.c_str());
+									mvprintw(3,43,"%s",datos.c_str());
 								}
 								else{
-									mvprintw(3,44,"%s",datos.c_str());
+									mvprintw(3,43,"%s",datos.c_str());
 								}
 								defensa = atoi(datos.c_str());
 							}
