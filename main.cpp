@@ -10,13 +10,10 @@
 #include "gigante.h"
 #include "mago.h"
 #include "soldado.h"
-#include <fstream>
 
 using std::vector;
 using std::cout;
 using std::string;
-using std::ofstream;
-using std::ifstream;
 
 void comprobarGane(vector<Jugador*>,bool*);
 void imprimirGuerreros(vector<Jugador*>);
@@ -36,7 +33,7 @@ int main(int argc, char const *argv[]) {
 	while(opcion != 3){
 		char str2[80];
 		mvprintw(0,0,"Bienvenido al Juego de batalla (Se requieren 2 jugadores)");
-		mvprintw(1,0,"Ingrese una opcion\n1. Juego\n2. Instrucciones\n3. Salir");
+		mvprintw(1,0,"Ingrese una opcion\n1. Juego\n3. Salir");
 		opcion = getch()-'0';
 		erase();
 		char str1[80];
@@ -54,7 +51,7 @@ int main(int argc, char const *argv[]) {
 					vector<Guerrero*> Tropa;
 					mvprintw(0,0,"Ingrese el nombre del Jugador %d: ",(i+1));
 					getstr(str1);
-				//erase();
+					//erase();
 					for (int j = 0; j < 5; ++j)
 					{
 						mvprintw(1,0,"Ingrese el tipo de guerrero que desea crear: ");
@@ -404,23 +401,6 @@ int main(int argc, char const *argv[]) {
 				}
 			}
 			
-		}else if (opcion == 2)
-		{
-			mvprintw(12,0, "Entre.");
-			getch();
-			erase();
-			char cadena;
-			string hola;
-			ifstream fe("Instrucciones.txt");
-
-			while(!fe.eof()) {
-				fe >> cadena;
-				hola.push_back(cadena);
-				mvprintw(0,0,"%s",hola.c_str());
-				//cout << cadena << endl;
-			}
-			fe.close();
-			getch();
 		}
 
 	}
